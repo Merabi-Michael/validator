@@ -1,0 +1,51 @@
+<form [formGroup]="userForm" class="container">
+
+    <div class="form-group">
+        <label>Full Name</label><br>
+        <input type="text" formControlName="fullName">
+        <p *ngIf="userForm.get('fullName')?.errors?.['required']">The field must be full</p>
+        <p *ngIf="userForm.get('fullName')?.errors?.['minLength']">The name must contain at least 5 characters</p>
+    </div>
+
+    <div class="form-group">
+        <label>Username</label><br>
+        <input type="text" formControlName="userName">
+        <p *ngIf="userForm.get('userName')?.errors?.['required']">The field must be full</p>
+        <p *ngIf="userForm.get('userName')?.errors?.['minLength']">The name must contain at least 6 characters</p>
+        <p *ngIf="userForm.get('userName')?.errors?.['forbiddenName']">A similar name has been registered</p>
+    </div>
+
+    <div class="form-group">
+        <label>Email</label><br>
+        <input type="email" formControlName="email">
+        <p *ngIf="userForm.get('email')?.errors?.['required']">Email is invalid</p>
+    </div>
+
+    <div class="form-group">
+        <label>Password</label><br>
+        <input type="password" formControlName="password">
+        <p *ngIf="userForm.get('password')?.errors?.['required']">The field must be full</p>
+        <p *ngIf="userForm.get('userName')?.errors?.['minLength']">The name must contain at least 8 characters</p>
+    </div>
+    
+    <div class="form-group">
+        <label>Confirm Password</label><br>
+        <input type="password" formControlName="confirmPassword">
+        <p *ngIf="userForm.get('confirmPassword')?.errors?.['required']">The field must be full</p>
+        <p *ngIf="userForm.errors?.['doesNotMatch']">Confirm Password does not match</p>
+    </div>
+
+    <div>
+        <input class="checkbox" type="checkbox" formControlName="agree">
+        <div class="div">
+            <label class="label">I have read and agree to the Terms </label>
+            <p *ngIf="userForm.get('agree')?.errors?.['required']"> Accept Terms is required</p>
+        </div>
+    </div>
+
+    <div>
+        <button class="button1" [disabled]="userForm.invalid"><p class="register">Register</p></button>
+        <button class="button2" type="reset"><p class="register2">Reset</p></button>
+    </div>
+
+</form>

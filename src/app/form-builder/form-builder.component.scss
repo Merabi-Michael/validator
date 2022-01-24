@@ -1,0 +1,80 @@
+.container {
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 35px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+input {
+  width: 250px;
+  height: 50px;
+  padding: 5px;
+  border: 2px solid violet;
+  border-radius: 3px;
+  outline: none;
+
+  &.ng-invalid {
+    border: 1px solid red;
+  }
+  &.ng-valid {
+    border: 1px solid green;
+  }
+}
+
+.checkbox {
+  width: 20px;
+}
+
+button {
+  margin-top: 5px;
+}
+
+p {
+  color: red;
+}
+
+.label {
+  color: red;
+}
+
+input {
+  margin-top: 10px;
+}
+
+.button1 {
+  width: 80px;
+  height: 35px;
+  border-radius: 10%;
+  background-color: royalblue;
+  font-style: italic;
+}
+
+.button2 {
+  width: 80px;
+  height: 35px;
+  border-radius: 10%;
+  background-color: yellowgreen;
+  font-style: italic;
+  margin-left: 100px;
+}
+
+.register {
+  color: wheat;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.register2 {
+  color: royalblue;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.div {
+  margin-left: 35px;
+  margin-top: -40px;
+}
